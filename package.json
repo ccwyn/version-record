@@ -6,8 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccwyn/version-record.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ccwyn/version-record/issues"
+  },
+  "homepage": "https://github.com/ccwyn/version-record#readme",
   "keywords": [
-    "version"
+    "version-record"
   ],
   "author": "wyn",
   "license": "ISC",
