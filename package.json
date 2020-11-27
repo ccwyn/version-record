@@ -1,5 +1,5 @@
 {
-  "name": "version-record",
+  "name": "versions-record",
   "version": "1.0.0",
   "description": "记录版本号",
   "main": "index.js",

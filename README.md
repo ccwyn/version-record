@@ -1,4 +1,4 @@
-version-record
+versions-record
 ====================
 
 > 生成版本号记录
@@ -11,7 +11,7 @@ version-record
 ## 安装
 
 ```sh
-npm i -D version-record
+npm i -D versions-record
 ```
 
 ## 使用方法
