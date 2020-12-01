@@ -29,9 +29,8 @@ class VersionRecord {
       compiler.hooks.entryOption.tap("VersionRecord", (state) => {
         fs.writeFileSync(jsFilePath, newContent, "utf8");
       });
-      console.log('-=-=-=-=-=-=-=-=-'+buildPath);
       if (buildPath) {
-        compiler.hooks.afterEmit.tap("outputDist", (state) => {
+        compiler.hooks.done.tap("outputDist", (state) => {
           fs.writeFileSync(buildPath, newContent, "utf8");
         });
       }
