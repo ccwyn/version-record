@@ -1,6 +1,6 @@
 {
   "name": "versions-record",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "记录版本号",
   "main": "index.js",
   "scripts": {

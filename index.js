@@ -26,7 +26,7 @@ class VersionRecord {
       const version = getJsonVersion(jsonFile);
       const newContent = writeVersion(jsFilePath, version);
 
-      compiler.hooks.entryOption.tap("VersionRecord", (state) => {
+      compiler.hooks.environment.tap("VersionRecord", (state) => {
         fs.writeFileSync(jsFilePath, newContent, "utf8");
       });
       if (buildPath) {
