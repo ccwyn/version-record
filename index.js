@@ -9,9 +9,9 @@ const getJsonVersion = (filePath) => {
   return jsonContent ? jsonContent.version : "";
 };
 
-const writeVersion = (filePath, version, env) => {
+const writeVersion = (filePath, version) => {
   const newContent = babel.transformFileSync(filePath, {
-    plugins: [[babelPlugin, { version, env }]],
+    plugins: [[babelPlugin, { version }]],
   }).code;
   return newContent;
 };
@@ -22,9 +22,9 @@ class VersionRecord {
   }
   apply(compiler) {
     if (compiler) {
-      const { jsonFile, jsFilePath, buildPath, env } = this.config;
+      const { jsonFile, jsFilePath, buildPath } = this.config;
       const version = getJsonVersion(jsonFile);
-      const newContent = writeVersion(jsFilePath, version, env);
+      const newContent = writeVersion(jsFilePath, version);
 
       compiler.hooks.environment.tap("VersionRecord", (state) => {
         fs.writeFileSync(jsFilePath, newContent, "utf8");
